@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../CSS/contacto.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Contacto</title>
+  </head>
+  <body>
+    <div class="layout">
+      <div class="header">
+        Tatuadora, diseñadora e ilustradora argentina
+        <div></div>
+        <a href="https://api.whatsapp.com/send?phone=543513801817">
+          <img
+            src="../image/whatsapp_11zon.jpeg"
+            alt="whatsApp"
+          />
+        </a>
+        <a href="https://www.instagram.com/guty.tattoo/">
+          <img src="../image/instagram_11zon.jpeg" alt="instagram" />
+        </a>
+      </div>
+      </header>
+      <main class="main">
+        <div class="background-images">
+          <div class="overlay"></div>
+          <img src="../image/DSC01177-min.jpeg" />
+          <img src="../image/DSC02272-min.jpeg" />
+          <img src="../image/DSC02277-min.jpeg" />
+          <form id="contact-form">
+            <a href="index.html" class="close-button">&times;</a>
+            <h2>Contacto</h2>
+
+            <!-- Columna Izquierda -->
+            <div class="form-column column-left">
+              <label for="first-name">Nombre y Apellido</label>
+              <input type="text" id="first-name" name="first-name" required />
+
+              <label for="phone">Teléfono</label>
+              <input type="tel" id="phone" name="phone" required />
+
+              <label for="email">Email</label>
+              <input type="text" id="email" name="email" required />
+            </div>
+
+            <!-- Columna Derecha -->
+            <div class="form-column column-right">
+              <label for="zone">Zona a Tatuar</label>
+              <select id="zone" name="zone" required>
+                <option value="">Seleccione una zona</option>
+                <option value="brazo">Brazo</option>
+                <option value="pierna">Pierna</option>
+                <option value="espalda">Espalda</option>
+                <option value="pecho">Pecho</option>
+                <option value="mano">Mano</option>
+                <option value="otro">Otro</option>
+              </select>
+
+              <label for="schedule">Horarios Disponibles</label>
+              <select id="schedule" name="schedule" required>
+                <option value="">Seleccione un horario</option>
+                <option value="mañana">Mañana (9:00 - 12:00)</option>
+                <option value="tarde">Tarde (12:00 - 18:00)</option>
+                <option value="noche">Noche (18:00 - 21:00)</option>
+              </select>
+
+              <label for="comments">Comentarios</label>
+              <textarea id="comments" name="comments" rows="4"></textarea>
+            </div>
+            <button type="submit">Enviar</button>
+          </form>
+        </div>
+      </main>
+      <footer class="footer">
+        
+      </footer>
+    </div>
+    <script src="../js/contacto.js"></script>
+  </body>
+</html>

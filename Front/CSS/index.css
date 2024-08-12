@@ -1,3 +1,9 @@
+.body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
 .layout{
     display: grid;
     gap:4px;
@@ -24,7 +30,7 @@
 
 header{
     grid-area: header;
-    background-color: #c08bfd;
+    background-color: #B8AA8D;
     text-align: center;
     font-size: x-large;
 }
@@ -32,26 +38,28 @@ header{
 
 footer{
     grid-area: footer;
-    background-color: #c08bfd;
+    background-color: #B8AA8D;
 }
 nav{
     grid-area: sidebar;
-    background-color: coral;
+    background-color: #F2BC8E;
 }
 
 main{
     grid-area: main;
-    background-color: #b2ee94;
+    background-color: rgb(135, 182, 111);
+
+
 }
 
 .widget{
     grid-area: widget;
-    background-color: #ff8983;
+    background-color: #b5dca8;
     width: 100%;
 }
 
 .statistics{
     grid-area: statistics;
-    background-color: #99c2fe;
+    background-color: #475941;
     width: 100%;
 }
