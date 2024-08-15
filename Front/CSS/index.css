@@ -1,57 +1,61 @@
-.layout{
-    display: grid;
-    gap:4px;
-    grid-template-rows: 40px 40px auto 60px 60px 40px;
-    grid-template-columns: 1fr;
-    grid-template-areas: 'header' 'sidebar' 'main' 'widget' 'statistics' 'footer';
-    height: 100vh;
+
+.navbar {
+    background-color: #2C4842;
+    overflow: hidden;
+}
+
+.navbar-menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar-menu > li {
+    position: relative;
+}
+
+.navbar-menu > li > a {
+    display: block;
+    color: #F0DED0;
     text-align: center;
-    font-size: x-large;
+    padding: 14px 20px;
+    text-decoration: none;
 }
 
-@media(min-width:480px){
-    .layout {
-        display: grid;
-        grid-template-rows: 40px auto 80px 40px;
-        grid-template-columns: 160px auto auto;
-        grid-template-areas:
-        'header header header'
-        'sidebar main main'
-        'sidebar widget statistics'
-        'footer footer footer';
-    }
+.navbar-menu > li > a:hover {
+    background-color: #707168;
 }
 
-header{
-    grid-area: header;
-    background-color: #c08bfd;
-    text-align: center;
-    font-size: x-large;
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #333;
+    min-width: 160px;
+    z-index: 1;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 
-
-footer{
-    grid-area: footer;
-    background-color: #c08bfd;
-}
-nav{
-    grid-area: sidebar;
-    background-color: coral;
+.dropdown-menu > li > a {
+    color: #F0DED0;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
 }
 
-main{
-    grid-area: main;
-    background-color: #b2ee94;
+.dropdown-menu > li > a:hover {
+    background-color: #575757;
 }
 
-.widget{
-    grid-area: widget;
-    background-color: #ff8983;
-    width: 100%;
+.dropdown:hover .dropdown-menu {
+    display: block;
 }
 
-.statistics{
-    grid-area: statistics;
-    background-color: #99c2fe;
-    width: 100%;
+.dropdown-menu.show {
+    display: block;
 }
