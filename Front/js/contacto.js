@@ -1,43 +1,32 @@
-document.addEventListener('DOMContentLoaded', function() {
-    // Cancel
-    document.querySelector('.close-button').addEventListener('click', function() {
-        window.location.href = '/Front/index.html';
+document.addEventListener("DOMContentLoaded", function () {
+    // Cancel button
+    document.querySelector(".close-button").addEventListener("click", function () {
+        window.location.href = "/Front/index.html";
     });
 
-    // Send
-    document.querySelector('#contact-form').addEventListener('submit', function(event) {
-        event.preventDefault(); 
-        window.location.href = '/Front/pages/index.html'; 
-    });
-});
+    // Send button
+    document.querySelector("#contact-form").addEventListener("submit", function (event) {
+        event.preventDefault(); // Previene el envío del formulario
 
-document.addEventListener('DOMContentLoaded', () => {
-    const form = document.getElementById('contact-form');
-    const modal = document.getElementById('success-modal');
-    const closeModal = document.querySelector('.modal .close');
-
-    form.addEventListener('submit', (event) => {
-        event.preventDefault(); // Evita el envío del formulario por defecto
-
-        // Muestra el modal
-        modal.style.display = 'block';
-
-        // Opcional: Puedes limpiar el formulario aquí si lo deseas
-        form.reset();
-
-        // Oculta el modal después de 5 segundos (5000 milisegundos)
-        setTimeout(() => {
-            modal.style.display = 'none';
-        }, 50000); // Cambia este valor para ajustar el tiempo en milisegundos
+        // Mostrar el modal
+        document.getElementById('success-modal').style.display = 'block';
+        
+        // Opcional: redirigir a la página después de un retraso
+        setTimeout(function () {
+            window.location.href = "/Front/index.html";
+        }, 80000000); // Redirige después de un largo retraso (ajusta el tiempo según lo necesario)
     });
 
-    closeModal.addEventListener('click', () => {
-        modal.style.display = 'none';
+    // Cerrar el modal cuando se haga clic en el botón de cerrar (si es necesario)
+    // Puedes eliminar este código si no necesitas un botón de cierre en el modal
+    document.querySelector('.close-modal').addEventListener('click', function () {
+        document.getElementById('success-modal').style.display = 'none';
     });
 
-    window.addEventListener('click', (event) => {
-        if (event.target === modal) {
-            modal.style.display = 'none';
+    // Cerrar el modal si se hace clic fuera del contenido del modal
+    window.addEventListener('click', function (event) {
+        if (event.target === document.getElementById('success-modal')) {
+            document.getElementById('success-modal').style.display = 'none';
         }
     });
 });
