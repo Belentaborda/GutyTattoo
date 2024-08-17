@@ -100,25 +100,24 @@ main {
 
 .presentation-content {
     text-align: center;
-    font-size: 1.2em; /* Adjust font size as needed */
+    font-size: 1.1em; /* Adjust font size as needed */
     margin-bottom: 10px;
 
 }
 .presentation-content h2{
     color: #F0DED0;
-    font-size: 1.3em;
+    font-size: 1.1em;
 }
 
 .presentation-content p{
     color: #707168;
-    font-size: 1.0em;
+    font-size: 0.8em;
     margin-bottom: 50px;
 }
 
 .articles-container {
     display: flex;
     justify-content: space-between;
-    border-top: 4px solid #CB8873; /* Top dividing line */
 }
 
 article {
@@ -129,34 +128,35 @@ article {
 }
 
 .article-header {
-    border-bottom: 3px solid #CB8873; /* Bottom dividing line */
+    border-bottom: 1px solid #F09F9C; /* Bottom dividing line */
     padding-top: 20px;
     padding-bottom: 20px;
     margin-bottom: 30px;
     text-align: center;
     font-weight: bold;
     color: #F0DED0;
-    font-size: 1.2em;
 
+}
+.technique h3{
+    color: #F0DED0;
+    font-size: 0.9em;
+}
+
+.disenos h3{
+    color: #F0DED0;
+    font-size: 0.9em;
 }
 
 .disenos p{
     color: #707168;
-    font-size: 1.0em;
-}
-
-.technique h3 p{
-    font-size: 1.0em;
-
-}
-
-.technique h3{
-    color: #F0DED0;
+    font-size: 0.8em;
 }
 
 .technique p{
-    color:#707168;
+    color: #707168;
+    font-size: 0.8em;
 }
+
 
 .footer {
     background-color: #1B262D;
