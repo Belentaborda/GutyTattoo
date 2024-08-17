@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // Opcional: redirigir a la página después de un retraso
         setTimeout(function () {
             window.location.href = "/Front/index.html";
-        }, 80000000); // Redirige después de un largo retraso (ajusta el tiempo según lo necesario)
+        }, 8000000); // Redirige después de un largo retraso (ajusta el tiempo según lo necesario)
     });
 
     // Cerrar el modal cuando se haga clic en el botón de cerrar (si es necesario)
