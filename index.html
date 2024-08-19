@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Front/CSS/index.css"/>
+    <link rel="stylesheet" href="../Front/CSS/presentacion.css"/> 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    /> 
+    <title>GUTY TATOO</title>
+</head>
+<body>
+    <div class="layout">
+        <header>
+            <div class="header">
+                <!-- Columna izquierda -->
+                <div class="left-column">
+                  Tatuadora, diseñadora e ilustradora argentina
+                  <img
+                    src="../image/arargentinaflag_111670_11zon.jpeg"
+                    alt="Bandera Argentina"
+                  />
+                </div>
+                <!-- Columna del medio -->
+                <div class="center-column">
+                  <!-- Aquí puedes insertar un logo -->
+                  <a href="index.html">
+                    <img src="../image/logo.png" alt="Logo" class="logo" />
+                  </a>
+                </div>
+                <!-- Columna derecha -->
+                <div class="right-column">
+                  <a href="https://api.whatsapp.com/send?phone=543513801817">
+                    <img src="../image/icono_whatsapp.png" alt="WhatsApp" />
+                  </a>
+                  <a href="https://www.instagram.com/guty.tattoo/">
+                    <img src="../image/icono_instagram.png" alt="Instagram" />
+                  </a>
+                  <a href="mailto:guty.tattooarg@gmail.com">
+                    <img src="../image/email_icono.png" alt="email" />
+                  </a>
+                </div>
+            </div>
+    
+    </div>   
+</header>
+
+    <nav class="navbar">
+        <ul class="navbar-menu">
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle">AGENDA TU CITA</a>
+                    <li><a href="proximoDestino.html">Proximos destinos</a></li>
+                    <li><a href="proximoEvento.html">Proximos eventos</a></li>
+                    <li><a href="disponibilidad.html">Disponibilidad</a></li>
+            </li>  
+            <li><a href="index.html">INICIO</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle">DISEÑOS</a>
+                <ul class="dropdown-menu">
+                    <li><a href="web-development.html">Mangas</a></li>
+                    <li><a href="design.html">Handpoke</a></li>
+                    <li><a href="marketing.html">Color</a></li>
+                </ul>
+            </li>
+            <li><a href="presentacion.html">SOBRE MI</a></li>
+            <li><a href="contact.html">LUPA</a></li>
+        </ul>
+    </nav>
+    <nav class="sidebar">
+        <ul class="sidebar-menu">
+            <li><a href="#">Agenda tu cita</a></li>
+            <li><a href="#">Proximos destinos</a></li>
+            <li><a href="#">Proximos eventos</a></li>
+        </ul>
+        <div class="calendar-container">
+            <h3>Almanaque</h3>
+            <div id="calendar"></div> <!-- Aquí se generará el almanaque -->
+        </div>
+    </nav>
+    <div class="carrousel">
+        <div class="carrousel-inner">
+            <div class="carrousel-item active">
+                <img src="img/" alt="carrousel 1">    
+            </div>
+            <div class="carrousel-item">
+                <img src="img/" alt="carrousel 2">
+            </div>
+            <div class="carrousel-item">
+                <img src="img/" alt="carrousel 3">
+            </div>
+        </div>
+        <button class="carrousel-control prev" onclick="prevDiapositiva()">&#10094;</button>
+        <button class="carrousel-control next" onclick="nextDiapositiva()">&#10095;</button>
+    </div>
+        <main class="main">ACA no se que va jajaja</main>
+        <article class="widget">
+            <a href="../Front/pages/contacto.html">Appointments, contacto por tatuaje con JavaScript formulario, presupuesto disponibilidad y hs</a>
+        </article>
+        <article class="statistics">Diseños disponibles</article>
+        <footer class="footer">
+            <div class="footer-column logo-column">
+              <a href="index.html">
+                <img src="../image/logo.png" alt="Logo" class="logo" />
+              </a>
+            </div>
+            <div class="footer-column center-column">
+              <p>
+                Desarrollado por
+                <a href="https://tu-enlace-aqui.com" class="it-girls">IT girls</a>
+              </p>
+            </div>
+            <div class="footer-column contact-column">
+              <div class="contact-details">
+                <a
+                  href="https://api.whatsapp.com/send?phone=543513801817"
+                  class="contact-item"
+                >
+                  <img
+                    src="../image/icono_whatsapp.png"
+                    alt="WhatsApp"
+                    class="contact-icon"
+                  />
+                </a>
+                <a href="https://www.instagram.com/guty.tattoo/" class="contact-item">
+                  <img
+                    src="../image/icono_instagram.png"
+                    alt="Instagram"
+                    class="contact-icon"
+                  />
+                </a>
+                <a href="mailto:guty.tattooarg@gmail.com">
+                  <img
+                    src="../image/email_icono.png"
+                    alt="email"
+                    class="contact-icon"
+                  />
+                </a>
+              </div>
+              <div class="copy">&copy; 2024, Guty Tatto</div>
+            </div>
+          </footer>
+    </div>
+</body>
+<script src="./js/index.js"></script>
+<script src="./js/calendar.js"></script>
+</html>

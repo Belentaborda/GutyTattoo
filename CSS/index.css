@@ -1,0 +1,143 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: "Roboto";
+    box-sizing: border-box;
+}
+
+.layout {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+
+.navbar {
+    background-color: #2C4842;
+    overflow: hidden;
+}
+
+.navbar-menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar-menu > li {
+    position: relative;
+}
+
+.navbar-menu > li > a {
+    display: block;
+    color: #F0DED0;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+.navbar-menu > li > a:hover {
+    background-color: #707168;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #333;
+    min-width: 160px;
+    z-index: 1;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown-menu > li > a {
+    color: #F0DED0;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-menu > li > a:hover {
+    background-color: #575757;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu.show {
+    display: block;
+}
+
+/* Barra lateral fija */
+.sidebar {
+    height: 100%;
+    width: 250px; /* Ancho de la barra lateral */
+    position: fixed; /* Fija en la ventana */
+    top: 0;
+    left: 0;
+    background-color: #2C3E50;
+    padding-top: 20px;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1); /* Sombra para la barra lateral */
+}
+
+.sidebar-menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-menu li {
+    margin: 15px 0;
+}
+
+.sidebar-menu li a {
+    color: #F0F0F0;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+}
+
+.sidebar-menu li a:hover {
+    background-color: #34495E;
+}
+
+/* Contenido principal */
+.content {
+    margin-left: 250px; /* Espacio para la barra lateral */
+    padding: 20px;
+}
+
+/* Contenedor del almanaque */
+.calendar-container {
+    padding: 20px;
+    color: #F0F0F0;
+}
+
+#calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); /* 7 columnas para cada día de la semana */
+    gap: 5px;
+    text-align: center;
+    color: #F0F0F0;
+}
+
+#calendar .day {
+    background-color: #34495E;
+    padding: 10px;
+}
+
+#calendar .current-day {
+    background-color: #1ABC9C; /* Estilo especial para el día actual */
+}
+
+/* Contenido principal */
+.content {
+    margin-left: 250px; /* Espacio para la barra lateral */
+    padding: 20px;
+}
