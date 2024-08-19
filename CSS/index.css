@@ -84,6 +84,7 @@ body, html {
     background-color: #2C3E50;
     padding-top: 20px;
     box-shadow: 2px 0 5px rgba(0,0,0,0.1); /* Sombra para la barra lateral */
+    overflow-y: auto; /* Permitir el scroll si el contenido se excede */
 }
 
 .sidebar-menu {
@@ -115,8 +116,11 @@ body, html {
 
 /* Contenedor del almanaque */
 .calendar-container {
-    padding: 20px;
+    width: 100%; /* Asegurar que el contenedor se ajuste al 100% del ancho de la barra */
+    max-width: 250px; /* Limitar el ancho del calendario al tamaño de la barra lateral */
+    margin-top: 20px;
     color: #F0F0F0;
+    text-align: center; /* Centrar el contenido dentro del contenedor */
 }
 
 #calendar {
@@ -130,10 +134,17 @@ body, html {
 #calendar .day {
     background-color: #34495E;
     padding: 10px;
+    box-sizing: border-box; /* Asegura que el padding se incluya dentro del ancho total */
+    padding: 5px; /* Reducir el padding de las celdas */
+    font-size: 12px; /* Reducir el tamaño de la fuente si es necesario */
 }
 
 #calendar .current-day {
     background-color: #1ABC9C; /* Estilo especial para el día actual */
+}
+
+.sidebar-menu li a, .calendar-container {
+    word-wrap: break-word; /* Para romper el texto si es necesario */
 }
 
 /* Contenido principal */
