@@ -53,27 +53,6 @@ body, html {
     height: auto;
   }
   
-  .language {
-    display: flex;
-    align-items: center;
-    font-size: 0.8em;
-    font-weight: 400;
-    color: #fff;
-  }
-  
-  .language a {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 10px;
-    padding: 5px 10px;
-  }
-  
-  .language a:hover {
-    text-decoration: underline;
-    background-color: rgba(255, 255, 255, 0.2);
-    border-radius: 4px;
-  }
-
   .right-column {
     display: flex;
     align-items: center;
@@ -86,6 +65,7 @@ body, html {
     width: 20px;
     height: 20px;
   }
+
 /* Main */
 main {
     display: flex;
@@ -203,10 +183,13 @@ article {
 
 
 .footer-logo {
-    width: 100px; /* Ajusta el tamaño del logo según sea necesario */
+    width: 10px; /* Ajusta el tamaño del logo según sea necesario */
     height: auto;
 }
-
+.footer-column.logo-column .logo {
+    width: 50px; 
+    height: 40px;
+}
 
 .center-column {
     text-align: center;
