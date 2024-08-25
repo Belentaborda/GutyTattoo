@@ -52,7 +52,69 @@ body, html {
     width: 50%;
     height: auto;
   }
-  
+/* Estilo del Toggle */
+.language {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.language .es, .language .en {
+    color: #F0DED0; /* Color del texto */
+    flex: 1;
+    text-align: center;
+    margin: 0 5px 0 5px; /* Aumenta la distancia entre las palabras y el toggle */
+}
+
+.check {
+    position: relative;
+    margin-left: 15px;
+    width: 40px;
+    height: 20px;
+    appearance: none; /* Elimina el estilo por defecto del checkbox */
+    border-radius: 25px;
+    cursor: pointer; /* Cambia el cursor para indicar que es clickeable */
+    outline: none; /* Elimina el borde de enfoque */
+}
+
+.check:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    background-color: none; /* Fondo cuando no está marcado */
+    transition: background-color 0.50s; /* Transición para el cambio de color */
+}
+
+.check:after {
+    content: '';
+    position: absolute;
+    width: 17px;
+    height: 17px;
+    background-color: #2C4842; /* Color del círculo */
+    border: 2px solid #F09F9C; /* Borde del círculo */
+    border-radius: 50%; /* Círculo redondeado */
+    margin-left: 25px;
+    transition: transform 0s; /* Transición para el movimiento del círculo */
+    transform: translateX(0); /* Posición inicial */
+    top: 0.5px; /* Ajusta la posición vertical del círculo */
+    left: 1.5px; /* Ajusta la posición horizontal inicial del círculo */
+}
+
+.check:checked:after {
+   
+    transform: translateX(-30px); /* Mueve el círculo a la derecha cuando está marcado (EN) */
+    border: 2px solid #CB8873; /* Cambia el borde cuando está marcado */
+}
+
+.check:checked:before {
+    width: 40px;
+    height: 20px;
+    background-color: #F0DED0; /* Fondo cuando está marcado */
+}
+
+
   .right-column {
     display: flex;
     align-items: center;
@@ -204,13 +266,14 @@ article {
 
 .it-girls {
     font-weight: bold;
-    color: #fff;
+    color: #F0DED0;
     text-decoration: none;
 }
 
 
 .it-girls:hover {
     text-decoration: underline;
+    color: #F09F9C;
 }
 
 

@@ -263,14 +263,15 @@ body, html {
 
 .it-girls {
     font-weight: bold;
-    color: #fff;
+    color: #F0DED0;
     text-decoration: none;
 }
 
+
 .it-girls:hover {
     text-decoration: underline;
+    color: #F09F9C;
 }
-
 .contact-column {
     text-align: right;
     display: flex;
