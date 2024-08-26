@@ -42,13 +42,10 @@
   </header>
     <nav class="navbar">
         <ul class="navbar-menu">
-            
             <li><a href="/index.html">INICIO</a></li>
-            <li class="dropdown">
-                <a href="#" class="dropdown-toggle">DISEÑOS</a>
-            </li>
+            <li><a href="/pages/desing.html">DISEÑOS</a></li>
+            <li><a href="/pages/contacto.html">CONTACTO</a></li>
             <li><a href="/pages/presentacion.html">SOBRE MI</a></li>
-            <li><a href="contact.html">LUPA</a></li>
         </ul>
     </nav>
     <nav class="sidebar">
@@ -62,26 +59,24 @@
             <div id="calendar"></div> <!-- Aquí se generará el almanaque -->
         </div>
     </nav>
-    <div class="carrousel">
-        <div class="carrousel-inner">
-            <div class="carrousel-item active">
-                <img src="img/" alt="carrousel 1">    
+    <div class="carousel">
+        <div class="carousel-controls">
+          <input id="1" type="ratio" name="controls" checked/>
+            <input id="2" type="radio" name="controls"/>
+            <input id="3" type="radio" name="controls"/>
+            <div class="dots">
+              <label for="1"></label>
+              <label for="2"></label>
+              <label for="3"></label>
             </div>
-            <div class="carrousel-item">
-                <img src="img/" alt="carrousel 2">
-            </div>
-            <div class="carrousel-item">
-                <img src="img/" alt="carrousel 3">
+            <div class="carousel-img">
+                <img src="/image/DSC01994.jpg" alt="Imagen 1"/>    
+                <img src="/image/DSC02620.jpg"alt="Imagen 2" />
+                <img src="/image/tattoo-3268988_1280.jpg" alt="Imagen 3"/>
             </div>
         </div>
-        <button class="carrousel-control prev" onclick="prevDiapositiva()">&#10094;</button>
-        <button class="carrousel-control next" onclick="nextDiapositiva()">&#10095;</button>
     </div>
-        <main class="main">ACA no se que va jajaja</main>
-        <article class="widget">
-            <a href="../Front/pages/contacto.html">Appointments, contacto por tatuaje con JavaScript formulario, presupuesto disponibilidad y hs</a>
-        </article>
-        <article class="statistics">Diseños disponibles</article>
+        
         <footer class="footer">
             <div class="footer-column logo-column">
               <a href="index.html">

@@ -1,31 +1,29 @@
-let carrousel = 0;
+document.addEventListener('DOMContentLoaded', () => {
+    let currentSlide = 1;
+    const totalSlides = 3;
+    const autoSlideInterval = 5000; // 5000 ms = 5 segundos
 
+    function changeSlide() {
+        currentSlide++;
+        if (currentSlide > totalSlides) {
+            currentSlide = 1;
+        }
 
-function mostrarImg(inicio){
-    const diapositivas = document.querySelectorAll('.carrousel-item');
-    const totalDiapositivas = diapositivas.length;
-
-    if (inicio >= totalDiapositivas){
-        inicio = 0;
-    } else if(inicio<0){
-        inicio = totalDiapositivas - 1;
+        // Cambia el input de radio seleccionado para mostrar la siguiente imagen
+        document.getElementById(currentSlide.toString()).checked = true;
     }
 
-    const offset = -inicio*100;
-    document.querySelector('.carrousel-inner').style.transform = `translateX(${offset}%)`;
+    // Inicia la reproducción automática
+    let slideTimer = setInterval(changeSlide, autoSlideInterval);
 
-    diapositivas.forEach((diapositiva, i) =>{diapositiva.classList.toggle('active', i === inicio);});
-   
-    carrousel = inicio;
-}
+    // Añade eventos para pausar el carrusel cuando el usuario navega manualmente
+    document.querySelectorAll('.dots label').forEach(dot => {
+        dot.addEventListener('click', () => {
+            clearInterval(slideTimer); // Pausa la reproducción automática
+            // Reinicia el temporizador
+            slideTimer = setInterval(changeSlide, autoSlideInterval);
+        });
+    });
+});
 
-function nextDiapositiva(){
-    mostrarImg(carrousel + 1);
-}
-
-function prevDiapositiva(){
-    mostrarImg(carrousel - 1);
-}
-
-document.addEventListener('DOMContentLoaded' ,() =>{mostrarImg(carrousel);});
 
