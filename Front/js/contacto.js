@@ -1,3 +1,12 @@
+
+var check = document.querySelector(".check");
+
+check.addEventListener('click', idiom);
+
+function idiom() {
+    console.log(id = check.checked);
+
+
 document.addEventListener("DOMContentLoaded", function () {
     // Cancel button
     document.querySelector(".close-button").addEventListener("click", function () {
@@ -10,18 +19,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Mostrar el modal
         document.getElementById('success-modal').style.display = 'block';
-        
+
         // Opcional: redirigir a la página después de un retraso
         setTimeout(function () {
             window.location.href = "/Front/index.html";
         }, 5000); // Redirige después de un largo retraso (ajusta el tiempo según lo necesario)
     });
 
-    // Cerrar el modal cuando se haga clic en el botón de cerrar (si es necesario)
-    // Puedes eliminar este código si no necesitas un botón de cierre en el modal
+    // Elimina este código si no necesitas un botón de cierre en el modal
+    /*
     document.querySelector('.close-modal').addEventListener('click', function () {
         document.getElementById('success-modal').style.display = 'none';
     });
+    */
 
     // Cerrar el modal si se hace clic fuera del contenido del modal
     window.addEventListener('click', function (event) {
