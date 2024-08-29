@@ -10,127 +10,146 @@ body, html {
     display: flex;
     flex-direction: column;
     height: 100%;
-  }
- 
-  .header {
+}
+
+.header {
     background-color: #1B262D;
     color: #F0DED0;
     padding: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: nowrap; /* Asegura que las columnas no se rompan en varias líneas */
-  }
-  
-  .left-column {
+    flex-wrap: nowrap;
+}
+
+/* Adjusts the header for smaller screens */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .center-column {
+        margin-left: 0;
+        left: 0;
+        max-width: 100%;
+    }
+}
+
+.left-column {
     display: flex;
     align-items: center;
     font-size: 0.8em;
     font-weight: 400;
     margin-left: 20px;
-    white-space: nowrap; /* Asegura que el texto se mantenga en una sola línea */
-    flex-shrink: 1; /* Permite que la columna izquierda se reduzca si es necesario */
-    min-width: 0; /* Evita que la columna izquierda empuje las otras columnas fuera del espacio */
-  }
-  
-  .left-column img {
+    white-space: nowrap;
+    flex-shrink: 1;
+    min-width: 0;
+}
+
+.left-column img {
     width: 15px;
     height: 10px;
     margin-left: 7px;
-  }
-  
-  .center-column {
+}
+
+.center-column {
     display: flex;
     justify-content: center;
     flex: 0 1 auto;
     position: relative;
     left: -100px;
-    max-width: 30%; /* Ancho máximo de la columna central para dejar más espacio a la izquierda */
-  }
-  
-  .center-column .logo {
-    width: 50%;
-    height: auto;
-  }
-/* Estilo del Toggle */
-.language {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    max-width: 30%;
 }
 
-.language .es, .language .en {
-    color: #F0DED0; /* Color del texto */
-    flex: 1;
-    text-align: center;
-    margin: 0 5px 0 5px; /* Aumenta la distancia entre las palabras y el toggle */
+.center-column .logo {
+    width: 50%;
+    height: auto;
+}
+
+.es {
+    color: #F0DED0;
+    margin-right: -50px;
+    font-size: 0.8em;
+}
+
+.en {
+    color: #F0DED0;
+    margin-left: -80px;
+    font-size: 0.8em;
 }
 
 .check {
     position: relative;
-    margin-left: 15px;
+    margin-top: -5px;
     width: 40px;
-    height: 20px;
-    appearance: none; /* Elimina el estilo por defecto del checkbox */
-    border-radius: 25px;
-    cursor: pointer; /* Cambia el cursor para indicar que es clickeable */
-    outline: none; /* Elimina el borde de enfoque */
+    margin-left: -15px;
 }
 
 .check:before {
     content: '';
     position: absolute;
-    width: 100%;
-    height: 100%;
-    border-radius: 20px;
-    background-color: none; /* Fondo cuando no está marcado */
-    transition: background-color 0.50s; /* Transición para el cambio de color */
+    width: 30px;
+    height: 20px;
+    background-color: #F0DED0;
+    border-radius: 25px;
 }
 
 .check:after {
     content: '';
     position: absolute;
-    width: 17px;
-    height: 17px;
-    background-color: #2C4842; /* Color del círculo */
-    border: 2px solid #F09F9C; /* Borde del círculo */
-    border-radius: 50%; /* Círculo redondeado */
-    margin-left: 25px;
-    transition: transform 0s; /* Transición para el movimiento del círculo */
-    transform: translateX(0); /* Posición inicial */
-    top: 0.5px; /* Ajusta la posición vertical del círculo */
-    left: 1.5px; /* Ajusta la posición horizontal inicial del círculo */
+    width: 20px;
+    height: 20px;
+    background-color: #2C4842;
+    border-radius: 25px;
+    transition: 0.50s;
+    border: 2px solid #A5A3A1;
+    box-sizing: border-box;
 }
 
 .check:checked:after {
-   
-    transform: translateX(-30px); /* Mueve el círculo a la derecha cuando está marcado (EN) */
-    border: 2px solid #CB8873; /* Cambia el borde cuando está marcado */
+    left: 15px;
+    border: 2px solid #A5A3A1;
 }
 
-.check:checked:before {
-    width: 40px;
-    height: 20px;
-    background-color: #F0DED0; /* Fondo cuando está marcado */
+.chek:checked:before {
+    background-color: #A5A3A1;
 }
 
-
-  .right-column {
+/* Columna derecha */
+.right-column {
     display: flex;
     align-items: center;
     margin-right: 30px;
     gap: 25px;
-    flex-shrink: 0; /* Evita que la columna derecha se reduzca */
-  }
-  
-  .right-column img {
+    flex-shrink: 0;
+}
+
+.right-column img {
     width: 20px;
     height: 20px;
-  }
+}
 
 /* Main */
 main {
     display: flex;
+    flex-direction: row;
+}
+
+/* Adjusts the main content for smaller screens */
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+    }
+
+    .side-image-container {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .presentacion-box {
+        width: 100%;
+    }
 }
 
 .side-image-container {
@@ -155,32 +174,50 @@ main {
 }
 
 .presentacion-box {
-    border: none; /* Optional: adds a border around the box */
+    border: none;
     padding: 20px;
-    width: 70%; /* Adjust width as needed */
+    width: 70%;
     box-sizing: border-box;
 }
 
 .presentation-content {
     text-align: center;
-    font-size: 1.1em; /* Adjust font size as needed */
+    font-size: 1.1em;
     margin-bottom: 10px;
-
 }
-.presentation-content h2{
+
+.presentation-content h2 {
     color: #F0DED0;
     font-size: 1.1em;
 }
 
-.presentation-content p{
+.presentation-content p {
     color: #A5A3A1;
     font-size: 0.8em;
     margin-bottom: 50px;
 }
 
+.presentation-content img {
+    width: 15px;
+    height: 10px;
+}
+
 .articles-container {
     display: flex;
     justify-content: space-between;
+}
+
+/* Adjusts the article layout for smaller screens */
+@media (max-width: 768px) {
+    .articles-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    article {
+        width: 100%;
+        margin-bottom: 20px;
+    }
 }
 
 article {
@@ -191,39 +228,38 @@ article {
 }
 
 .article-header {
-    border-bottom: 1px solid #F09F9C; /* Bottom dividing line */
+    border-bottom: 1px solid #F09F9C;
     padding-top: 20px;
     padding-bottom: 20px;
     margin-bottom: 30px;
     text-align: center;
     font-weight: bold;
     color: #F0DED0;
-
 }
-.technique h3{
+
+.technique h3 {
     color: #F0DED0;
     font-size: 0.9em;
 }
 
-.disenos h3{
+.disenos h3 {
     color: #F0DED0;
     font-size: 0.9em;
 }
 
-.disenos p{
+.disenos p {
     color: #A5A3A1;
     font-size: 0.8em;
 }
 
-.technique p{
+.technique p {
     color: #A5A3A1;
     font-size: 0.8em;
 }
-
 
 .footer {
     background-color: #1B262D;
-    color: #fff;
+    color: #F0DED0;
     padding: 1px;
     display: flex;
     justify-content: space-between;
@@ -231,25 +267,48 @@ article {
     max-height: 60px;
 }
 
+/* Adjusts the footer layout for smaller screens */
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-column {
+        margin: 5px 0;
+    }
+
+    .logo-column, .contact-column {
+        text-align: center;
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+.logo-dream {
+    width: 37px;
+    height: 43px;
+    margin-bottom: -10px;
+    margin-left: -9px;
+}
 
 .footer-column {
     flex: 1;
     padding: 2px;
 }
 
-
 .logo-column {
     text-align: left;
     margin-left: 30px;
 }
 
-
 .footer-logo {
-    width: 10px; /* Ajusta el tamaño del logo según sea necesario */
+    width: 10px;
     height: auto;
 }
+
 .footer-column.logo-column .logo {
-    width: 50px; 
+    width: 50px;
     height: 40px;
 }
 
@@ -257,12 +316,11 @@ article {
     text-align: center;
     font-size: 0.9em;
     margin-left: 20%;
-   
 }
+
 .center-column p {
     margin: 0;
 }
-
 
 .it-girls {
     font-weight: bold;
@@ -270,12 +328,10 @@ article {
     text-decoration: none;
 }
 
-
 .it-girls:hover {
     text-decoration: underline;
     color: #F09F9C;
 }
-
 
 .contact-column {
     text-align: right;
@@ -284,15 +340,13 @@ article {
     align-items: flex-end;
 }
 
-
 .contact-details {
     display: flex;
-    justify-content: flex-end; /* Alinea los íconos a la derecha */
-    gap: 15px; /* Espacio entre los íconos */
-    margin-bottom: 5px; /* Espacio entre los íconos y el copyright */
-    margin-right: 20px;;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-bottom: 5px;
+    margin-right: 20px;
 }
-
 
 .contact-item {
     display: flex;
@@ -302,21 +356,13 @@ article {
     color: #fff;
 }
 
-
 .contact-icon {
-    width: 20px; /* Ajusta el tamaño del ícono */
+    width: 20px;
     height: 20px;
     margin-top: 2px;
 }
-
 
 .copy {
     font-size: 0.8em;
     margin-right: 15px;
 }
-
-
-
-
-
-

@@ -67,6 +67,63 @@ body, html {
     height: 20px;
   }
   
+  /* Estilo del Toggle */
+.es{
+    color: #F0DED0;
+    margin-right: -50px;
+    font-size: 0.8em;
+}
+
+
+.en{
+    color: #F0DED0;
+    margin-left: -80px;
+    font-size: 0.8em;
+}
+
+
+.check{
+    position: relative;
+    margin-top: -5px;
+    width: 40px;
+    margin-left: -15px;
+}
+
+
+.check:before{
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 20px;
+    background-color: #F0DED0;
+    border-radius: 25px;
+
+
+}
+.check:after{
+content: '';
+position: absolute;
+width: 20px;
+height:20px;
+background-color: #2C4842;
+border-radius: 25px;
+transition: 0.50s;
+border:2px solid #A5A3A1;
+box-sizing: border-box;
+}
+
+
+.check:checked:after{
+    left: 15px;
+    border: 2px solid #A5A3A1;
+}
+
+
+.chek:checked:before{
+    background-color: #A5A3A1;
+}
+
+  
   /* Columna derecha */
   .right-column {
     display: flex;
@@ -272,6 +329,14 @@ body, html {
     text-decoration: underline;
     color: #F09F9C;
 }
+
+.logo-dream{
+    width: 37px;
+    height: 43px;
+    margin-bottom: -10px;
+    margin-left: -9px;
+}
+
 .contact-column {
     text-align: right;
     display: flex;

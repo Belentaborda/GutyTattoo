@@ -1,11 +1,18 @@
-var check = document.querySelector(".check");
-check.addEventListener("click", idioma);
+var check=document.querySelector(".check");
 
-function idioma() {
-  let id = check.checked;
-  if (id == true) {
-    window.location.href = "/Front/pages/presentacion.html";
-  } else {
-    window.location.href = "/Front/en/presentacion.html";
+
+check.addEventListener('click', idiom);
+
+
+function idiom(){
+  let id=check.checked;
+
+
+  if(id==true){
+    location.href="../en/presentacion.html"
+  }else{
+    location.href="/Front/pages/presentacion.html"
   }
+
+
 }
