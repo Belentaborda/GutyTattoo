@@ -3,12 +3,15 @@ body, html {
     padding: 0;
     height: 100%;
     font-family: "Roboto";
-    
+    box-sizing: border-box;
+    background-color: #1B262D;
 }
 
-.main-content{
-    min-height: calc(100vh - 60px);
-    margin-bottom: 0;
+
+.layout {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .navbar {
@@ -18,6 +21,7 @@ body, html {
     width: 100%;
     z-index: 9;
     height: 60px;
+    justify-content: center;
 }
 
 .navbar-menu {
@@ -26,11 +30,15 @@ body, html {
     padding: 0;
     display: flex;
     justify-content: space-between;
+    justify-items: center;
     align-items: center;
 }
 
 .navbar-menu > li {
     position: relative;
+    align-items: stretch;
+    margin: 10px 0;
+    
 }
 
 .navbar-menu > li > a {
@@ -39,6 +47,8 @@ body, html {
     text-align: center;
     padding: 14px 20px;
     text-decoration: none;
+    margin: 0;
+    align-items: stretch;
 }
 
 .navbar-menu > li > a:hover {
@@ -48,7 +58,7 @@ body, html {
 .dropdown-menu > li > a:hover {
     background-color: #575757;
 }
-
+  
 /* Barra lateral fija */
 .sidebar {
     position: absolute;
@@ -145,14 +155,9 @@ body, html {
 
 .img-slider {
     display: flex;
-    box-sizing: border-box;
-    overflow-x: scroll;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    width: 100%;
-    height: 1000px;
-    max-width: 1200px;
-    max-height: 80vh;
+    overflow: hidden;
+    height: auto;
+    max-width: 100%;
     margin: 0 auto;
     position: relative;
 
@@ -160,10 +165,9 @@ body, html {
 
 .img-slider img {
     flex: 0 0 100%;
-    scroll-snap-align: center;
     object-fit: cover;
     max-width: 100%;
-    max-height: 100%;
+    height: auto;
 }
 
 .img-slider::-webkit-scrollbar {
