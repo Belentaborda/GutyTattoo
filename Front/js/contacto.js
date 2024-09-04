@@ -1,10 +1,18 @@
+var check=document.querySelector(".check");
 
-var check = document.querySelector(".check");
 
 check.addEventListener('click', idiom);
 
-function idiom() {
-    console.log(id = check.checked);
+
+function idiom(){
+  let id=check.checked;
+
+
+  if(id==true){
+    location.href="../en/contacto.html"
+  }else{
+    location.href="/Front/pages/contacto.html"
+  }
 
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -40,3 +48,4 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+}
