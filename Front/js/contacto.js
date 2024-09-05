@@ -1,4 +1,10 @@
 
+var check = document.querySelector(".check");
+
+check.addEventListener('click', idiom);
+
+function idiom() {
+    console.log(id = check.checked);
 
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -20,10 +26,12 @@ document.addEventListener("DOMContentLoaded", function () {
         }, 5000); // Redirige después de un largo retraso (ajusta el tiempo según lo necesario)
     });
 
-
+    // Elimina este código si no necesitas un botón de cierre en el modal
+    /*
     document.querySelector('.close-modal').addEventListener('click', function () {
         document.getElementById('success-modal').style.display = 'none';
     });
+    */
 
     // Cerrar el modal si se hace clic fuera del contenido del modal
     window.addEventListener('click', function (event) {
@@ -32,19 +40,3 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
-
-var check=document.querySelector(".check");
-
-
-check.addEventListener('click', idiom);
-
-
-function idiom(){
-  let id=check.checked;
-
-
-  if(id==true){
-    location.href="../en/contacto.html"
-  }else{
-    location.href="/Front/pages/contacto.html"
-  }}
