@@ -48,8 +48,6 @@ nav{
 main{
     grid-area: main;
     background-color: rgb(135, 182, 111);
-
-
 }
 
 .widget{
