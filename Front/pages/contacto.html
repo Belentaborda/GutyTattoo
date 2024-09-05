@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../CSS/contacto.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Contacto</title>
+  </head>
+  <body>
+    <header>
+      <div class="layout">
+          <div class="header">
+              <!-- Columna izquierda -->
+              <div class="left-column">
+                  Tatuadora, diseñadora e ilustradora argentina
+                  <img src="../image/arargentinaflag_111670_11zon.jpeg" alt="Bandera Argentina">
+              </div>
+              <!-- Columna del medio -->
+              <div class="center-column">
+                  <!-- Logo -->
+                  <a href="index.html">
+                      <img src="../image/Logo1_hueso.png" alt="Logo" class="logo">
+                  </a>
+              </div>
+              <!-- Lenguaje -->
+        <span class="es">ES</span>
+        <input type="checkbox" class="check">
+        <span class="en">EN</span>
+              <!-- Columna derecha -->
+              <div class="right-column">
+                  <a href="https://api.whatsapp.com/send?phone=543513801817">
+                      <img src="../image/icono_whatsapp.png" alt="WhatsApp">
+                  </a>
+                  <a href="https://www.instagram.com/guty.tattoo/">
+                      <img src="../image/icono_instagram.png" alt="Instagram">
+                  </a>
+                  <a href="mailto:guty.tattooarg@gmail.com">
+                      <img src="../image/email_icono.png" alt="email">
+                  </a>
+              </div>
+          </div>
+      </div>
+  </header>
+    <main class="main">
+      <div class="background-images">
+        <div class="overlay"></div>
+        <img src="../image/DSC01177-min.jpeg" />
+        <img src="../image/DSC02272-min.jpeg" />
+        <img src="../image/DSC02277-min.jpeg" />
+        <form id="contact-form">
+          <a href="index.html" class="close-button">&times;</a>
+          <h2>
+            CONTACTO
+            <img src="../image/MAQUINA-verde.png" alt="plumita" />
+          </h2>
+          <!-- Columna Izquierda -->
+          <div class="form-column column-left">
+            <label for="first-name">Nombre y Apellido</label>
+            <input type="text" id="first-name" name="first-name" required />
+            <label for="phone">Teléfono</label>
+            <input type="tel" id="phone" name="phone" required />
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <!-- Columna Derecha -->
+          <div class="form-column column-right">
+            <label for="zone">Zona a Tatuar</label>
+            <select id="zone" name="zone" required>
+              <option value="">Seleccione una zona</option>
+              <option value="brazo">Brazo</option>
+              <option value="pierna">Pierna</option>
+              <option value="espalda">Espalda</option>
+              <option value="pecho">Pecho</option>
+              <option value="mano">Mano</option>
+              <option value="otro">Otro</option>
+            </select>
+            <label for="schedule">Horarios Disponibles</label>
+            <select id="schedule" name="schedule" required>
+              <option value="">Seleccione un horario</option>
+              <option value="mañana">Mañana (9:00 - 12:00)</option>
+              <option value="tarde">Tarde (12:00 - 18:00)</option>
+              <option value="noche">Noche (18:00 - 21:00)</option>
+            </select>
+            <label for="comments">Comentarios</label>
+            <textarea id="comments" name="comments" rows="4"></textarea>
+          </div>
+          <!-- Alerta de enviado el mensaje. En 48 hs hábiles recibiras tu respuesta-->
+          <button type="submit" id="submit-button">Enviar</button>
+        </form>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="footer-column logo-column">
+        <a href="index.html">
+          <img src="../image/GT-hueso.png" alt="Logo" class="logo" />
+        </a>
+      </div>
+      <div class="footer-column center-column">
+        <p>
+          Desarrollado por
+          <a href="https://tu-enlace-aqui.com" class="it-girls">DreamCoders</a>
+        <img src="../image/dreamcoders.png" class="logo-dream">
+        </p>
+      </div>
+      <div class="footer-column contact-column">
+        <div class="contact-details">
+          <a
+            href="https://api.whatsapp.com/send?phone=543513801817"
+            class="contact-item"
+          >
+            <img
+              src="../image/icono_whatsapp.png"
+              alt="WhatsApp"
+              class="contact-icon"
+            />
+          </a>
+          <a href="https://www.instagram.com/guty.tattoo/" class="contact-item">
+            <img
+              src="../image/icono_instagram.png"
+              alt="Instagram"
+              class="contact-icon"
+            />
+          </a>
+          <a href="mailto:guty.tattooarg@gmail.com">
+            <img
+              src="../image/email_icono.png"
+              alt="email"
+              class="contact-icon"
+            />
+          </a>
+        </div>
+        <div class="copy">&copy; 2024, Guty Tattoo</div>
+      </div>
+    </footer>
+    <!-- Modal -->
+    <div id="success-modal" class="modal">
+      <div class="modal-content">
+          <!-- Logo pequeño -->
+          <img src="../image/GT-rosa.png" alt="Logo">
+          
+          <!-- Mensaje central -->
+          <div class="message">¡Gracias por tu consulta!</div>
+          
+          <!-- Respuesta adicional -->
+          <div class="response">En 48 hs vas a recibir tu respuesta.</div>
+      </div>
+  </div>
+    </div>
+    <script src="../js/contacto.js"></script>
+  </body>
+</html>
