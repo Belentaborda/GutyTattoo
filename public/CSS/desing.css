@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Reboto", sans-serif;
+}
+
+body{
+    background-color: #1B262D;
+    min-width: 100vh;
+    overflow-x: hidden;
+}
+
+.navbar {
+    background-color: #2c4842;
+    margin-top:0;
+    left: 0;
+    width: 100%;
+    z-index: 9;
+    height: 60px;
+    justify-content: center;
+}
+
+
+
+.navbar-menu {
+    list-style-type: none;
+    margin-top:0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-menu > li {
+    position: relative;
+    align-items: stretch;
+    margin: 10px 0;
+}
+
+.navbar-menu > li > a {
+    display: block;
+    color: #F0DED0;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    margin: 0;
+    align-items: stretch;
+}
+
+.navbar-menu > li > a:hover {
+    background-color: #707168;
+}
+
+.parallax{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#text{
+    position: absolute;
+    font-size: 5em;
+    color: #F0DED0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.parallax img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 100%;
+    pointer-events: none;
+    height: auto;
+    z-index: 1;
+}
+
+.sec{
+    position: relative;
+    background-color: #1B262D;
+   padding: 100px;
+}
+
+.sec h2{
+    font-size: 3em;
+    color: #F0DED0;
+    margin-bottom: 10px;
+}
+
+.sec p {
+    font-size: 1em;
+    color: #F0DED0;
+    font-weight: 300;
+}
+ 

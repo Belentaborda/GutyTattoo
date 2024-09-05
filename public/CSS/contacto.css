@@ -1,0 +1,442 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: "Roboto";
+    box-sizing: border-box;
+}
+
+
+.layout {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  
+  .header {
+    background-color: #1B262D;
+    color: #F0DED0;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap; /* Asegura que las columnas no se rompan en varias líneas */
+  }
+  
+  .left-column {
+    display: flex;
+    align-items: center;
+    font-size: 0.8em;
+    font-weight: 400;
+    margin-left: 20px;
+    white-space: nowrap; /* Asegura que el texto se mantenga en una sola línea */
+    flex-shrink: 1; /* Permite que la columna izquierda se reduzca si es necesario */
+    min-width: 0; /* Evita que la columna izquierda empuje las otras columnas fuera del espacio */
+  }
+  
+  .left-column img {
+    width: 15px;
+    height: 10px;
+    margin-left: 7px;
+  }
+  
+  .center-column {
+    display: flex;
+    justify-content: center;
+    flex: 0 1 auto;
+    position: relative;
+    left: -100px;
+    max-width: 30%; /* Ancho máximo de la columna central para dejar más espacio a la izquierda */
+  }
+  
+  .center-column .logo {
+    width: 50%;
+    height: auto;
+  }
+  
+  .right-column {
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+    gap: 25px;
+    flex-shrink: 0; /* Evita que la columna derecha se reduzca */
+  }
+  
+  .right-column img {
+    width: 20px;
+    height: 20px;
+  }
+  
+  /* Estilo del Toggle */
+.es{
+    color: #F0DED0;
+    margin-right: -50px;
+    font-size: 0.8em;
+}
+
+
+.en{
+    color: #F0DED0;
+    margin-left: -80px;
+    font-size: 0.8em;
+}
+
+
+.check{
+    position: relative;
+    margin-top: -5px;
+    width: 40px;
+    margin-left: -15px;
+}
+
+
+.check:before{
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 20px;
+    background-color: #F0DED0;
+    border-radius: 25px;
+
+
+}
+.check:after{
+content: '';
+position: absolute;
+width: 20px;
+height:20px;
+background-color: #2C4842;
+border-radius: 25px;
+transition: 0.50s;
+border:2px solid #A5A3A1;
+box-sizing: border-box;
+}
+
+
+.check:checked:after{
+    left: 15px;
+    border: 2px solid #A5A3A1;
+}
+
+
+.chek:checked:before{
+    background-color: #A5A3A1;
+}
+
+  
+  /* Columna derecha */
+  .right-column {
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+    gap: 25px;
+  }
+  
+  .right-column img {
+    width: 20px;
+    height: 20px;
+  }
+
+.main {
+    flex: 1;
+    position: relative;
+}
+
+
+.background-images {
+    display: flex;
+    height: 700px;
+    width: 100%;
+}
+
+.background-images img {
+    flex: 1;
+    object-fit: cover;
+    opacity: 0.7;
+}
+
+.background-images .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.195);
+}
+
+#contact-form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 80%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    max-width: 60%;
+    width: 90%;
+    padding: 20px;
+    background-color: #F0DED095;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    color: #1B262D;
+    text-decoration: none;
+    font-weight: bold;
+    border: none;
+    border-radius: 50%;
+    padding: 5px 10px;
+    cursor: pointer;
+    z-index: 3;
+}
+#contact-form h2 {
+    grid-column: span 2;
+    color: #1B262D;
+    text-align: center;
+    font-weight: bold;
+    align-items: center;
+    margin-bottom: 1px; /* Ajusta este valor para reducir la separación */
+  }
+  
+  #contact-form h2 img {
+    width: 45px;  /* Ajusta el tamaño de la plumita */
+    height: 45px;
+    margin-left: -9px; /* Espacio entre el texto "CONTACTO" y la plumita */
+  }
+
+#contact-form button {
+    grid-column: span 2;
+    width: 90%;
+    padding: 10px;
+    margin-left: 50px;
+    max-height: 50px;
+    background-color: #1B262D;
+    color: #F0DED0;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    z-index: 2;
+    font-size: 0.9em;
+    font-weight: 400;
+}
+
+
+#contact-form button:focus {
+    background-color: #2C4842;
+}
+
+
+#contact-form button:hover {
+    background-color: #2C4842;
+}
+
+
+#contact-form label {
+    margin-bottom: 8px;
+    font-weight: 400;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+
+#contact-form input,
+#contact-form select,
+#contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    box-sizing: border-box;
+    font-style: italic;
+    font-size: 0.7em;
+}
+
+
+#contact-form .column-left {
+    grid-column: 1 / 2;
+}
+
+
+#contact-form .column-right {
+    grid-column: 2 / 3;
+}
+
+
+#contact-form textarea {
+    height: 80px;
+    resize: vertical;
+}
+
+.footer {
+    background-color: #1B262D;
+    color: #fff;
+    padding: 1px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-height: 60px;
+}
+
+.footer-column {
+    flex: 1;
+    padding: 2px;
+}
+
+.logo-column {
+    text-align: left;
+    margin-left: 30px;
+}
+
+.footer-logo {
+    width: 100px; /* Ajusta el tamaño del logo según sea necesario */
+    height: auto;
+}
+
+.footer-column.logo-column .logo {
+    width: 50px; 
+    height: 40px;
+}
+
+
+.center-column {
+    text-align: center;
+    font-size: 0.9em;
+    margin-left: 20%;
+   
+}
+.center-column p {
+    margin: 0;
+}
+
+.it-girls {
+    font-weight: bold;
+    color: #F0DED0;
+    text-decoration: none;
+}
+
+
+.it-girls:hover {
+    text-decoration: underline;
+    color: #F09F9C;
+}
+
+.logo-dream{
+    width: 37px;
+    height: 43px;
+    margin-bottom: -10px;
+    margin-left: -9px;
+}
+
+.contact-column {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.contact-details {
+    display: flex;
+    justify-content: flex-end; /* Alinea los íconos a la derecha */
+    gap: 15px; /* Espacio entre los íconos */
+    margin-bottom: 5px; /* Espacio entre los íconos y el copyright */
+    margin-right: 20px;;
+}
+
+.contact-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+}
+
+.contact-icon {
+    width: 20px; /* Ajusta el tamaño del ícono */
+    height: 20px;
+    margin-top: 2px;
+}
+
+.copy {
+    font-size: 0.8em;
+    margin-right: 15px;
+}
+
+/* Estilo del modal */
+.modal {
+    display: none; /* Ocultar el modal por defecto */
+    position: fixed;
+    z-index: 1000; /* Asegúrate de que el z-index sea alto para que esté por encima de otros elementos */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    font-size: 1.1em;
+    font-weight: 400;
+}
+
+.modal-content {
+    background-color: #1B262D;
+    margin: 10% auto; /* Ajusta el margen superior para centrar verticalmente */
+    padding: 30px;
+    border: none;
+    width: 80%;
+    height: 40%;
+    max-width: 400px;
+    border-radius: 9px;
+    text-align: center;
+    position: relative; /* Necesario para posicionar el contenido */
+    display: flex;
+    flex-direction: column; /* Organiza los elementos en columna */
+    justify-content: center; /* Centra verticalmente el contenido */
+    align-items: center; /* Centra horizontalmente el contenido */
+    color: #F0DED0;
+}
+
+.modal-content img {
+    margin-bottom: 50px; /* Espacio debajo del logo */
+    width: 100px; /* Ajusta el tamaño del logo según sea necesario */
+    height: auto;
+}
+
+.modal-content .message {
+    font-size: 1.2em; /* Tamaño de fuente para el mensaje */
+    margin-bottom: 20px; /* Espacio debajo del mensaje */
+}
+
+.modal-content .response {
+    font-size: 1em; /* Tamaño de fuente para la respuesta */
+}
+
+
+
+@media (max-width: 768px) {
+    .background-images {
+        flex-direction: column;
+        height: auto;
+    }
+
+
+    .background-images img {
+        height: 30vh;
+    }
+
+
+    #contact-form {
+        width: 90%;
+        padding: 15px;
+        grid-template-columns: 1fr;
+    }
+}
+
+
