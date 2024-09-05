@@ -67,24 +67,27 @@ body, html {
     height: auto;
 }
 
-.es {
+.es{
     color: #F0DED0;
     margin-right: -50px;
     font-size: 0.8em;
 }
 
-.en {
+
+.en{
     color: #F0DED0;
     margin-left: -80px;
     font-size: 0.8em;
 }
 
-.check {
+
+.check{
     position: relative;
     margin-top: -5px;
     width: 40px;
     margin-left: -15px;
 }
+
 
 .check:before {
     content: '';
