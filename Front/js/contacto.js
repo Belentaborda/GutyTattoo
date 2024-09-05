@@ -24,6 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
         setTimeout(function () {
             window.location.href = "/Front/index.html";
         }, 5000); // Redirige después de un largo retraso (ajusta el tiempo según lo necesario)
+
     });
 
     // Elimina este código si no necesitas un botón de cierre en el modal
@@ -40,3 +41,4 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+}
