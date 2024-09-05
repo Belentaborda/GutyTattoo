@@ -20,9 +20,9 @@ body, html {
     display: flex;
     justify-content: space-between;
     align-items: center;
-  /* Asegura que las columnas no se rompan en varias líneas */
+    flex-wrap: nowrap; /* Asegura que las columnas no se rompan en varias líneas */
   }
-
+  
   .left-column {
     display: flex;
     align-items: center;
@@ -418,127 +418,25 @@ box-sizing: border-box;
     font-size: 1em; /* Tamaño de fuente para la respuesta */
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
-    .header {
+
+
+@media (max-width: 768px) {
+    .background-images {
         flex-direction: column;
-        align-items: center;
+        height: auto;
     }
 
-    .center-column {
-        max-width: 70%;
-        position: static;
-        margin-top: 10px;
-        left: 0;
+
+    .background-images img {
+        height: 30vh;
     }
 
-    .right-column {
-        margin-right: 0;
-    }
-
-    .footer {
-        flex-direction: column;
-        align-items: center;
-        padding: 10px;
-    }
-
-    .footer-column {
-        margin-bottom: 10px;
-        text-align: center;
-    }
-
-    .center-column {
-        margin-left: 0;
-    }
 
     #contact-form {
-        grid-template-columns: 1fr;
-        max-width: 90%;
-    }
-
-    .modal-content {
         width: 90%;
-        padding: 20px;
+        padding: 15px;
+        grid-template-columns: 1fr;
     }
 }
-
-/* TELEFONOS*/
-@media only screen and (max-width: 480px){
-    .left-column,
-    .right-column {
-        font-size: 0.7em;
-        gap: 15px;
-        margin: 0 10px;
-    }
-
-    .left-column img{
-        width: 10px;
-        height: 8px;
-        margin: -10px 0 5px;
-    }
-
-    .logo{
-        margin-bottom: 5px;
-        margin-right: -20px;
-    }
-
-    .right-column img {
-        width: 15px;
-        height: 15px;
-
-    }
-
-    .check:before{
-        content: '';
-        position: absolute;
-        width: 25px;
-        height: 15px;
-        background-color: #F0DED0;
-        border-radius: 25px;
-    
-    
-    }
-    .check:after{
-    width: 15px;
-    height:15px;
-    background-color: #2C4842;
-    border-radius: 25px;
-    transition: 0.50s;
-    border:2px solid #A5A3A1;
-    }
-    
-    .es{
-        margin-right: 50px;
-        margin-bottom: -10px;
-        
-    }
-    
-    .en{
-        margin-left: 55px;
-        margin-top: -17px;
-        margin-bottom: 15px;
-    }
-
-    .check{
-        margin-left: 10px;
-    }
-
-    .footer-logo {
-        width: 10px;
-    }
-    .footer-column.logo-column img{
-       margin-right: 400px;
-    }
-
-    .footer-column.center-column p {
-        margin-bottom: 65
-        ;
-    }
-    #contact-form {
-        width: 100%;
-        padding: 10px;
-    }
-}
-
-
 
 
