@@ -58,6 +58,7 @@ body{
     justify-content: center;
     align-items: center;
     height: 100vh;
+    overflow: hidden;
 }
 
 #text{
@@ -94,4 +95,6 @@ body{
     color: #F0DED0;
     font-weight: 300;
 }
+
+
  
