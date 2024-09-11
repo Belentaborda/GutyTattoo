@@ -21,8 +21,6 @@ body{
     justify-content: center;
 }
 
-
-
 .navbar-menu {
     list-style-type: none;
     margin-top:0;
@@ -54,6 +52,10 @@ body{
 
 .parallax{
     position: relative;
+    background-attachment: fixed; /* Esto crea el efecto de parallax */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; /* Se adapta a diferentes tamaños de pantalla */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -61,12 +63,12 @@ body{
     overflow: hidden;
 }
 
-#text{
+/*#text{
     position: absolute;
     font-size: 5em;
     color: #F0DED0;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-}
+}*/
 
 .parallax img{
     position: absolute;
@@ -76,6 +78,7 @@ body{
     pointer-events: none;
     height: auto;
     z-index: 1;
+    object-fit: cover;
 }
 
 .sec{
@@ -96,5 +99,62 @@ body{
     font-weight: 300;
 }
 
+/* Ajustes para tabletas y teléfonos en la media query */
+@media (max-width: 768px) {
+    .parallax {
+        height: 50vh;
+        background-attachment: scroll;
+    }
 
+    .sec {
+        padding: 50px; /* Reducir el padding para mejor ajuste en pantallas pequeñas */
+    }
+
+    .sec h2 {
+        font-size: 2em; /* Ajustar el tamaño del título en pantallas pequeñas */
+    }
+
+    .sec p {
+        font-size: 0.9em; /* Ajustar el tamaño del párrafo */
+    }
+
+    .navbar-menu {
+        flex-direction: column; /* Cambiar menú a columna en pantallas pequeñas */
+        align-items: center;
+    }
+
+    .navbar-menu > li > a {
+        padding: 10px 15px; /* Reducir el tamaño del padding en el menú */
+    }
+
+    .parallax img {
+        width: 100%; /* Asegura que la imagen se ajuste al ancho disponible */
+        height: auto; /* Mantiene la proporción */
+    }
+}
+
+/* Ajustes adicionales para pantallas muy pequeñas (teléfonos) */
+@media (max-width: 480px) {
+
+    .navbar-menu {
+        font-size: 0.9em; /* Reducir el tamaño de la fuente del menú */
+    }
+
+    .sec {
+        padding: 30px; /* Reducir padding para mejorar la legibilidad en teléfonos */
+    }
+
+    .sec h2 {
+        font-size: 1.8em;
+    }
+
+    .sec p {
+        font-size: 0.8em;
+    }
+    .parallax img {
+        width: 100%; /* Asegura que se ajuste bien en pantallas muy pequeñas */
+        height: auto;
+        object-fit: cover; /* Ajusta la imagen sin distorsionarla */
+    }
+}
  
