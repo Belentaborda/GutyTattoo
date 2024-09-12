@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Opcional: redirigir a la página después de un retraso
         setTimeout(function () {
-            window.location.href = "/Front/index.html";
+            window.location.href = "/index.html";
         }, 5000); // Redirige después de un largo retraso (ajusta el tiempo según lo necesario)
     });
 
