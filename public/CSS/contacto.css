@@ -332,10 +332,11 @@ box-sizing: border-box;
 }
 
 .logo-dream{
-    width: 37px;
-    height: 43px;
-    margin-bottom: -10px;
+    width: 40px;
+    height: 45px;
+    margin-bottom: -15px;
     margin-left: -9px;
+    margin-right: 12px;
 }
 
 .contact-column {
