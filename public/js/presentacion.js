@@ -11,7 +11,7 @@ function idiom(){
   if(id==true){
     location.href="../en/presentacion.html"
   }else{
-    location.href="/Front/pages/presentacion.html"
+    location.href="/public/pages/presentacion.html"
   }
 
 

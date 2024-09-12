@@ -27,3 +27,13 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+var check=document.querySelector(".check");
+check.addEventListener('click', idiom);
+function idiom(){
+  let id=check.checked;
+  if(id==true){
+    location.href="/public/en/index.html"
+  }else{
+    location.href="/index.html"
+  }
+}

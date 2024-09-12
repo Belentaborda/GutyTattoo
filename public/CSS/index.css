@@ -21,7 +21,8 @@ body, html {
     width: 100%;
     z-index: 9;
     height: 60px;
-    justify-content: center;
+    box-sizing: border-box;
+
 }
 
 .navbar-menu {
@@ -30,15 +31,11 @@ body, html {
     padding: 0;
     display: flex;
     justify-content: space-between;
-    justify-items: center;
     align-items: center;
 }
 
 .navbar-menu > li {
     position: relative;
-    align-items: stretch;
-    margin: 10px 0;
-    
 }
 
 .navbar-menu > li > a {
@@ -47,16 +44,10 @@ body, html {
     text-align: center;
     padding: 14px 20px;
     text-decoration: none;
-    margin: 0;
-    align-items: stretch;
 }
 
 .navbar-menu > li > a:hover {
     background-color: #707168;
-}
-
-.dropdown-menu > li > a:hover {
-    background-color: #575757;
 }
   
 /* Barra lateral fija */

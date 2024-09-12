@@ -15,3 +15,16 @@ window.addEventListener('scroll',() => {
     ilust4.style.right = value * 1 + 'px';
 
 }) ;
+
+
+
+var check=document.querySelector(".check");
+check.addEventListener('click', idiom);
+function idiom(){
+  let id=check.checked;
+  if(id==true){
+    location.href="/public/en/desing.html"
+  }else{
+    location.href="/public/pages/desing.html"
+  }
+}
