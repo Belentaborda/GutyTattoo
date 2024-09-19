@@ -7,21 +7,13 @@ body, html {
     background-color:#1B262D;
 }
 
-
-.layout {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-}
-
 .navbar {
-    margin-top: 0;
     left: 0;
     width: 100%;
     background-color: rgba(44, 72, 66, 0.9);
-    z-index: 1000;
+    z-index: 9;
     height: 60px;
-    box-sizing: border-box;
+    justify-content: center;
 }
 
 .navbar-menu {
@@ -56,14 +48,14 @@ body, html {
 /* Barra lateral */
 .sidebar {
     position: absolute;
-    width: 270px; /* Ancho de la barra lateral */
-    height: calc(100% - 5px);
-    top: 104px;
+    width: 270px;
+    height: calc(100% - 2px);
+    top: 103px;
     left: 0;
     background-color: rgba(44, 72, 66, 0.9);
     padding-top: 20px;
-    box-shadow: 2px 0 5px rgba(0,0,0,0.1); /* Sombra para la barra lateral */
-    overflow-y: auto; /* Permitir el scroll si el contenido se excede */
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1); 
+    overflow-y: auto; 
     z-index: 999;
 }
 

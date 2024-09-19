@@ -61,28 +61,31 @@ body{
     overflow: hidden;
 }
 
-/*#text{
-    position: absolute;
-    font-size: 5em;
-    color: #F0DED0;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-}*/
-
 .parallax img{
     position: absolute;
     top: 0;
     left: 0;
     max-width: 100%;
-    pointer-events: none;
     height: auto;
+    pointer-events: none;
     z-index: 1;
     object-fit: cover;
+}
+
+#ilust2, #lust3{
+    opacity: 0.5;
+}
+
+#ilust4{
+    box-shadow: rgba(0,0,0,0.1);
+    padding: 20px;
+
 }
 
 .sec{
     position: relative;
     background-color: #1B262D;
-   padding: 100px;
+    padding: 100px;
 }
 
 .sec h2{
@@ -98,10 +101,16 @@ body{
 }
 
 /* Ajustes para tabletas y teléfonos en la media query */
-@media (max-width: 768px) {
+@media only screen and (max-width: 768px) {
     .parallax {
         height: 50vh;
         background-attachment: scroll;
+        background-size: cover;
+    }
+    parallax img {
+        width: 100%;
+        height: auto; /* Mantener la proporción en pantallas pequeñas */
+        object-fit: contain; /* Ajustar la imagen al contenedor */
     }
 
     .sec {
@@ -124,15 +133,10 @@ body{
     .navbar-menu > li > a {
         padding: 10px 15px; /* Reducir el tamaño del padding en el menú */
     }
-
-    .parallax img {
-        width: 100%; /* Asegura que la imagen se ajuste al ancho disponible */
-        height: auto; /* Mantiene la proporción */
-    }
 }
 
 /* Ajustes adicionales para pantallas muy pequeñas (teléfonos) */
-@media (max-width: 480px) {
+@media only screen and (max-width: 480px) {
 
     .navbar-menu {
         font-size: 0.9em; /* Reducir el tamaño de la fuente del menú */
