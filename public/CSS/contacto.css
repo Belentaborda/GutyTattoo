@@ -11,9 +11,11 @@ body, html {
     display: flex;
     flex-direction: column;
     height: 100%;
+    position: fixed;
   }
   
   .header {
+ position: fixed;
     background-color: #1B262D;
     color: #F0DED0;
     padding: 10px;
