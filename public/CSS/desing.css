@@ -1,51 +1,8 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Reboto", sans-serif;
-}
 
 body{
     background-color: #1B262D;
     min-width: 100vh;
     overflow-x: hidden;
-}
-
-.navbar {
-    background-color: rgba(44, 72, 66, 0.8);    margin-top:0;
-    left: 0;
-    width: 100%;
-    z-index: 9;
-    height: 60px;
-    justify-content: center;
-}
-
-.navbar-menu {
-    list-style-type: none;
-    margin-top:0;
-    padding: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.navbar-menu > li {
-    position: relative;
-    align-items: stretch;
-    margin: 10px 0;
-}
-
-.navbar-menu > li > a {
-    display: block;
-    color: #F0DED0;
-    text-align: center;
-    padding: 14px 20px;
-    text-decoration: none;
-    align-items: stretch;
-}
-
-.navbar-menu > li > a:hover {
-    background-color: #707168;
 }
 
 .parallax{
@@ -64,27 +21,33 @@ body{
 .parallax img{
     position: absolute;
     top: 0;
-    left: 0;
-    max-width: 100%;
+    right: 7%;
+    align-items: center;
+    max-width: 85%;
     height: auto;
     pointer-events: none;
     z-index: 1;
     object-fit: cover;
 }
 
-#ilust2, #lust3{
-    opacity: 0.5;
+#ilust2, #ilust3{
+    opacity: 0.9;
+    filter: brightness(70%);
+    
 }
 
 #ilust4{
-    box-shadow: rgba(0,0,0,0.1);
+    box-shadow: rgba(0,0,0,0.5);
     padding: 20px;
+    max-width: 80%;
+    margin-top: 50px;
 
 }
 
 .sec{
     position: relative;
     background-color: #1B262D;
+    margin-top: 20px;
     padding: 100px;
 }
 
