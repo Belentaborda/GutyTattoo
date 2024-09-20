@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/public/CSS/index.css">
-    <link rel="stylesheet" href="/public/CSS/contacto.css">
+    <link rel="stylesheet" href="/public/CSS/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -16,66 +16,60 @@
 <body>
   <header>
     <div class="header">
-                <!-- Columna izquierda -->
       <div class="left-column">
         Argentine tattoo artist, designer and illustrator
       <img src="../image/arargentinaflag_111670_11zon.jpeg" alt="Bandera Argentina"/>
       </div>
-                <!-- Columna del medio -->
       <div class="center-column">
-                  <!-- Aquí puedes insertar un logo -->
       <a href="index.html"><img src="/public/image/Logo1_hueso.png" alt="Logo" class="logo" /></a>
       </div>
-
       <span class="es">ES</span>
-      <input type="checkbox" class="check" checked>
+      <input type="checkbox" class="check" id="languageToggle" checked>
       <span class="en">EN</span>
-                <!-- Columna derecha -->
-                <div class="right-column">
-                  <a href="https://api.whatsapp.com/send?phone=543513801817">
-                    <img src="/public/image/icono_whatsapp.png" alt="WhatsApp" />
-                  </a>
-                  <a href="https://www.instagram.com/guty.tattoo/">
-                    <img src="/public/image/icono_instagram.png" alt="Instagram" />
-                  </a>
-                  <a href="mailto:guty.tattooarg@gmail.com">
-                    <img src="/public/image/email_icono.png" alt="email" />
-                  </a>
-                </div>
+          <div class="right-column">
+            <a href="https://api.whatsapp.com/send?phone=543513801817">
+            <img src="/public/image/icono_whatsapp.png" alt="WhatsApp" />
+            </a>
+            <a href="https://www.instagram.com/guty.tattoo/">
+            <img src="/public/image/icono_instagram.png" alt="Instagram" />
+            </a>
+            <a href="mailto:guty.tattooarg@gmail.com">
+            <img src="/public/image/email_icono.png" alt="email" />
+            </a>
+          </div>
     </div>
   </header>
-    <nav class="navbar">
-        <ul class="navbar-menu">
-            <li><a href="/public/en/index.html">HOME</a></li>
-            <li><a href="/public/en/desing.html">DESIGNS</a></li>
-            <li><a href="/public/en/contacto.html">CONTACT</a></li>
-            <li><a href="/public/en/presentacion.html">ABOUT ME</a></li>
-        </ul>
-    </nav>
-    <nav class="sidebar">
-        <ul class="sidebar-menu">
-            <li><a href="/pages/contacto.html">Schedule your appointment</a></li>
-            <li><a href="/pages/proximosDestinos.html">Next destinations</a></li>
-            <li><a href="/pages/proximosEventos.html">Next events</a></li>
-        </ul>
-        <div class="calendar-container">
-            <h3>Calendar</h3>
-            <div id="calendar"></div> <!-- Aquí se generará el almanaque -->
-        </div>
-    </nav>
-    <div class="photo-slider">
-      <div class="img-slider">
-        <img id="slide1" src="/public/image/tattoo-3268988_1280.jpg" alt="print">
-        <img id="slide2" src="/public/image/tattoo-3268988_1280.jpg" alt="tattoo">
-        <img id="slide3" src="/public/image/tattoo-3268988_1280.jpg" alt="maquina">
-      </div>
-      <div class="button-slider">
-        <a href="#slide1"></a>
-        <a href="#slide2"></a>
-        <a href="#slide3"></a>
-      </div>
+  <nav class="navbar">
+    <ul class="navbar-menu">
+        <li><a href="/public/en/index.html">HOME</a></li>
+        <li><a href="/public/en/desing.html">DESIGNS</a></li>
+        <li><a href="/public/en/contact.html">CONTACT</a></li>
+        <li><a href="/public/en/presentation.html">ABOUT ME</a></li>
+    </ul>
+</nav>
+  <div class="photo-slider">
+    <div class="img-slider">
+      <img id="slide1" src="/public/image/tattoo-3268988_1280.jpg" alt="print">
+      <img id="slide2" src="/public/image/tattoo-3268988_1280.jpg" alt="tattoo">
+      <img id="slide3" src="/public/image/tattoo-3268988_1280.jpg" alt="maquina">
     </div>
-        
+    <div class="button-slider">
+      <a href="#slide1"></a>
+      <a href="#slide2"></a>
+      <a href="#slide3"></a>
+    </div>
+  </div>
+  <nav class="sidebar">
+    <ul class="sidebar-menu">
+        <li><a href="/public/en/contact.html">Schedule your appointment</a></li>
+        <li><a href="/public/en/nextDestinations.html">Next destinations</a></li>
+        <li><a href="/public/en/nextEvents.html">Next events</a></li>
+    </ul>
+    <div class="calendar-container">
+        <h3>Calendario</h3>
+        <div id="calendar"></div>
+    </div>
+  </nav>
         <footer class="footer">
             <div class="footer-column logo-column">
               <a href="index.html">
@@ -96,14 +90,14 @@
                   class="contact-item"
                 >
                   <img
-                    src="/public/image/icono_whatsapp.png"
+                    src="public/image/icono_whatsapp.png"
                     alt="WhatsApp"
                     class="contact-icon"
                   />
                 </a>
                 <a href="https://www.instagram.com/guty.tattoo/" class="contact-item">
                   <img
-                    src="/public/image/icono_instagram.png"
+                    src="public/image/icono_instagram.png"
                     alt="Instagram"
                     class="contact-icon"
                   />
@@ -123,5 +117,4 @@
 </body>
 <script src="/public/js/index.js"></script>
 <script src="/public/js/calendar.js"></script>
-<script src="/public/js/proxEventos.js"></script>
 </html>

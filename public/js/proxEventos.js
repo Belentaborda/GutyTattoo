@@ -29,3 +29,21 @@ slider.addEventListener('touchmove', (e) => {
     const walk = (x - startX) * 3; // Velocidad de deslizamiento
     slider.scrollLeft = scrollLeft - walk;
 });
+
+var check=document.querySelector(".check");
+
+
+check.addEventListener('click', idiom);
+
+
+function idiom(){
+  let id=check.checked;
+
+
+  if(id==true){
+    location.href="../en/nextEvents.html"
+  }else{
+    location.href="/public/pages/proximosEventos.html"
+  }
+
+}

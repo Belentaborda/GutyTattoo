@@ -41,7 +41,7 @@ function idiom(){
 
 
   if(id==true){
-    location.href="../en/contacto.html"
+    location.href="../en/contact.html"
   }else{
     location.href="/public/pages/contacto.html"
   }}

@@ -1,21 +1,9 @@
-body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    font-family: "Roboto", sans-serif;
-    box-sizing: border-box;
-}
-
-.layout {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-}
 
 /* Main */
 main {
     display: flex;
     flex-direction: row;
+    background-color: #1B262D;
 }
 
 /* Adjusts the main content for smaller screens */
@@ -39,6 +27,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+   margin-top: 105px;
 }
 
 .side-image {

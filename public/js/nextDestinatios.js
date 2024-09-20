@@ -9,9 +9,9 @@ function idiom(){
 
 
   if(id==true){
-    location.href="../en/presentation.html"
+    location.href="../en/nextDestinations.html"
   }else{
-    location.href="/public/pages/presentacion.html"
+    location.href="/public/pages/proximosDestinos.html"
   }
 
 
