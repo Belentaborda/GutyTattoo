@@ -79,7 +79,7 @@ main {
 }
 
 /* Adjusts the article layout for smaller screens */
-@media (max-width: 768px) {
+@media (max-width: 360px) {
     .articles-container {
         flex-direction: column;
         align-items: center;
@@ -126,71 +126,4 @@ article {
 .technique p {
     color: #A5A3A1;
     font-size: 0.8em;
-}
-
-.logo-dream {
-    width: 37px;
-    height: 43px;
-    margin-bottom: -10px;
-    margin-left: -9px;
-}
-
-.footer-column.logo-column .logo {
-    width: 50px;
-    height: 40px;
-}
-
-.center-column {
-    text-align: center;
-    font-size: 0.9em;
-    margin-left: 20%;
-}
-
-.center-column p {
-    margin: 0;
-}
-
-.it-girls {
-    font-weight: bold;
-    color: #F0DED0;
-    text-decoration: none;
-}
-
-.it-girls:hover {
-    text-decoration: underline;
-    color: #F09F9C;
-}
-
-.contact-column {
-    text-align: right;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-}
-
-.contact-details {
-    display: flex;
-    justify-content: flex-end;
-    gap: 15px;
-    margin-bottom: 5px;
-    margin-right: 20px;
-}
-
-.contact-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-decoration: none;
-    color: #fff;
-}
-
-.contact-icon {
-    width: 20px;
-    height: 20px;
-    margin-top: 2px;
-}
-
-.copy {
-    font-size: 0.8em;
-    margin-right: 15px;
 }
