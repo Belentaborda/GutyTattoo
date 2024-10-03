@@ -1,9 +1,9 @@
 body, html{
-margin: 0;
-padding: 0;
-height: 100%;
-font-family: "Roboto" , sans-serif;
-box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: "Roboto" , sans-serif;
+    box-sizing: border-box;
 }
 
 .layout {
@@ -70,7 +70,6 @@ box-sizing: border-box;
     height: 20px;
   }
   
-  /* Estilo del Toggle */
 .es{
     color: #F0DED0;
     margin-right: -50px;
@@ -104,15 +103,15 @@ box-sizing: border-box;
 
 }
 .check:after{
-content: '';
-position: absolute;
-width: 20px;
-height:20px;
-background-color: #2C4842;
-border-radius: 25px;
-transition: 0.50s;
-border:2px solid #A5A3A1;
-box-sizing: border-box;
+    content: '';
+    position: absolute;
+    width: 20px;
+    height:20px;
+    background-color: #2C4842;
+    border-radius: 25px;
+    transition: 0.50s;
+    border:2px solid #A5A3A1;
+    box-sizing: border-box;
 }
 
 
@@ -142,7 +141,7 @@ box-sizing: border-box;
 
   .navbar {
     position: fixed; /* Fija el navbar */
-    top: 45px; /* Coloca el navbar justo debajo del header */
+    top: 46px; /* Coloca el navbar justo debajo del header */
     left: 0;
     width: 100%; 
     background-color: rgba(44, 72, 66, 0.9); /* Transparencia para el fondo */
@@ -280,4 +279,207 @@ box-sizing: border-box;
 .copy {
     font-size: 0.8em;
     margin-right: 15px;
+}
+
+/* General Media Queries */
+@media screen and (max-width: 768px) {
+    /* Ajustes generales para tablets */
+    .header {
+        flex-direction: column;
+        padding: 20px;
+        align-items: center;
+
+    }
+    
+    .left-column, .center-column, .right-column {
+        margin: 0;
+        text-align: center;
+        margin-bottom: 40px;
+        left: 70%;
+
+    }
+
+    .left-column {
+        margin-right: 120px;
+    }
+
+    .center-column {
+        left: 0;
+        max-width: 50%;
+        margin-right: 120px;
+
+    }
+
+   .es{
+        margin-right: 30%;
+   }
+
+   .en{
+        position: relative; /* Habilita el uso de top */
+        top: -27px; /* Ajusta la posición vertical del texto EN */
+   }
+
+   .check{
+        bottom: 12px;
+        right: 60px
+    
+   }
+
+    .right-column {
+       margin-right: 20%;
+       margin-bottom: 2%;
+    }
+
+    .navbar{
+        top:11.8em;
+        flex-direction: column;
+        height: auto;
+    }
+
+    .navbar-menu{
+        margin-right: 20%;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    /* Ajuste del footer */
+    .footer {
+        flex-direction: column; /* Cambia la dirección a columna */
+        align-items: center; /* Centra los elementos en la columna */
+        padding: 10px; /* Ajusta el padding para una mejor distribución */
+        max-height: 100%;
+    }
+
+    .footer-column {
+        margin-bottom: 25px; /* Añade espacio entre las columnas */
+        width: 100%; /* Asegura que cada columna ocupe todo el ancho */
+        text-align: center; /* Centra el contenido de cada columna */
+    }
+    
+    .footer-column.logo-column .logo{
+        margin-right: 23%;
+    }
+
+    .center-column {
+        margin-left: 0; /* Elimina cualquier margen a la izquierda */
+        text-align: center; /* Centra el texto de la columna */
+        top: -30px;
+        margin-bottom: -1%;
+    }
+
+    .contact-item{
+        top:2%;
+    }
+    
+    .contact-details {
+        justify-content: center; /* Centra los íconos de contacto */
+        gap: 15px; /* Espacio entre los íconos */
+        margin-right: 53%;
+    }
+ 
+    .copy{
+        margin-right: 52%;
+    }
+
+    
+}
+
+@media screen and (max-width: 360px) {
+    .header {
+        flex-direction: column;
+        padding: 20px;
+        align-items: center;
+
+    }
+    
+    .left-column, .center-column, .right-column {
+        margin: 0;
+        text-align: center;
+        margin-bottom: 40px;
+        left: 70%;
+        padding: 1px;
+
+    }
+
+    .left-column {
+        margin-left: -80px;
+    }
+
+    .center-column {
+        left: 0;
+        max-width: 50%;
+        margin-right: 25%;
+        margin-bottom: -10px;
+    }
+
+   .es{
+        margin-right: 45%;
+    }
+
+    .en{
+        position: relative; /* Habilita el uso de top */
+        top: -27px; /* Ajusta la posición vertical del texto EN */
+        left:10%
+    }
+
+   .check{
+        bottom: 12px;
+        right: 40px;
+        width: 10px;
+   }
+
+    .right-column {
+       margin-right: 20%;
+       margin-bottom: 2%;
+    }
+
+    .right-column img{
+        width: 15px;
+        height: 15px;
+    }
+    .navbar{
+        top: 11em;
+        flex-direction: column;
+        height: auto;
+    }
+
+    .navbar-menu{
+        margin-right: 20%;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    /* Ajuste del footer */
+    .footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-column {
+        text-align: center;
+    }
+    .footer-column.center-column{
+        margin-right: 10%;
+        text-align: center;
+    }
+
+    .contact-details {
+        justify-content: center;
+    }
+
+    
+    .contact-item{
+        top:2%;
+    }
+   
+    .contact-details {
+        justify-content: center; /* Centra los íconos de contacto */
+        gap: 15px; /* Espacio entre los íconos */
+        bottom: 10px;
+
+    }
+    .footer-column.contact-column{
+        margin-left: 20%;
+    }
+
 }
