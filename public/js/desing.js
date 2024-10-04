@@ -14,8 +14,6 @@ window.addEventListener('scroll',() => {
 
 }) ;
 
-
-
 var check=document.querySelector(".check");
 check.addEventListener('click', idiom);
 function idiom(){
@@ -26,3 +24,23 @@ function idiom(){
     location.href="/public/pages/desing.html"
   }
 }
+
+// Función que detecta el scroll para aplicar la animación
+function revealCards() {
+  const cards = document.querySelectorAll('.card');
+
+  for (let i = 0; i < cards.length; i++) {
+      const windowHeight = window.innerHeight;
+      const elementTop = cards[i].getBoundingClientRect().top;
+      const elementVisible = 150;
+
+      if (elementTop < windowHeight - elementVisible) {
+          cards[i].classList.add('visible');
+          setTimeout(() => {
+            cards[i].querySelector('.card-text').classList.add('visible');
+        }, 200);
+      }
+  }
+}
+
+window.addEventListener('scroll', revealCards);
